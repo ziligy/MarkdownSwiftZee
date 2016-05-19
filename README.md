@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-71787A.svg)](https://tldrlegal.com/license/mit-license)
 [![Platforms](https://img.shields.io/badge/Platforms-OS--Linux-lightgray.svg?style=flat)](https://swift.org)
 
-Markdown to HTML via discount.
+Markdown to HTML via [discount](https://github.com/Orc/discount).
 
 ## Installation
 
