@@ -7,6 +7,8 @@ Markdown to HTML via [discount](https://github.com/Orc/discount).
 
 ## Installation
 
+[Install discount](https://github.com/Orc/discount/blob/master/INSTALL)
+
 ```swift
 import PackageDescription
 
