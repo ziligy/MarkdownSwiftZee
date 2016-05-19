@@ -1,4 +1,3 @@
-import Foundation
 import CDiscount
 
 public enum Error : ErrorProtocol {
@@ -24,11 +23,11 @@ public struct Markdown {
 
     public var html: String {
 
-        var buffer = [BytePointer?](repeating: BytePointer(allocatingCapacity: 1), count: 1)
+        var bufferPointer = [BytePointer?](repeating: BytePointer(allocatingCapacity: 1), count: 1)
 
-        mkd_document(markdown, &buffer)
+        mkd_document(markdown, &bufferPointer)
 
-        guard let html = String(validatingUTF8: buffer[0]!) else {
+        guard let html = String(validatingUTF8: bufferPointer[0]!) else {
             return ""
         }
 
