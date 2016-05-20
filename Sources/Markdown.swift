@@ -25,6 +25,8 @@ public struct Markdown {
 
         var bufferPointer = [BytePointer?](repeating: BytePointer(allocatingCapacity: 1), count: 1)
 
+        defer { bufferPointer[0]!.deallocateCapacity(1) }
+
         mkd_document(markdown, &bufferPointer)
 
         guard let html = String(validatingUTF8: bufferPointer[0]!) else {
